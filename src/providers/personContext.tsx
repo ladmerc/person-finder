@@ -1,20 +1,20 @@
 import React, { useRef, useState } from "react";
-import { Person } from "../models";
+import { TPerson } from "../models";
 import data from "./mock.json";
 
 type FilterPersonContext = {
-  persons: Person[];
-  setFilteredPersons: (persons: Person[]) => void;
+  persons: TPerson[];
+  setFilteredPersons: (persons: TPerson[]) => void;
 };
 
-const PersonStateContext = React.createContext<Person[] | undefined>(undefined);
+const PersonStateContext = React.createContext<TPerson[] | undefined>(undefined);
 const PersonStateFilterContext = React.createContext<
   FilterPersonContext | undefined
 >(undefined);
 
 const PersonsProvider = ({ children }: { children: React.ReactNode }) => {
-  const persons = useRef<Person[]>(data);
-  const [filteredPersons, setFilteredPersons] = useState<Person[]>(
+  const persons = useRef<TPerson[]>(data);
+  const [filteredPersons, setFilteredPersons] = useState<TPerson[]>(
     persons.current
   );
 

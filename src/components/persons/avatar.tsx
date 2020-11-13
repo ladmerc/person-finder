@@ -1,12 +1,13 @@
 import * as React from "react";
+import { TPerson } from '../../models'
 
-export default function Avatar({ person }: any) {
+export default function Avatar({ person }: { person: TPerson }) {
   return (
     <img
       src={person.avatar}
-      alt={`${person} avatar`}
-      width="50px"
-      height="50px"
+      alt={`${person.name} avatar`}
+      width="100px"
+      height="100px"
     />
   );
 }

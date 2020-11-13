@@ -10,3 +10,14 @@ body,
   height: 100%;
   overflow-x: hidden;
 }
+
+li {
+  list-style: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .container-width {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

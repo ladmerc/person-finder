@@ -9,13 +9,13 @@ import { PersonsProvider } from "./providers/personContext";
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="App container">
       <Helmet>
         <meta charSet="utf-8" />
         <title>Person Finder</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <div className="container">
+      <div className="container-width">
         <h1>The Person Finder</h1>
         <p>
           If you just can't find someone and need to know what they look like,

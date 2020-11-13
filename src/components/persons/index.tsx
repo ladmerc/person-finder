@@ -7,16 +7,9 @@ import { usePersons } from "../../providers/personContext";
 
 import Person from "./person";
 
-// TODO * as
-
-const Row = ({ index, style }: any) => (
-  <div className={index % 2 ? "ListItemOdd" : "ListItemEven"} style={style}>
-    Row {index}
-  </div>
-);
 
 const PersonRow = ({ index, style, data }: any) => {
-  console.log({ index, data });
+
   return (
     <div className={index % 2 ? "ListItemOdd" : "ListItemEven"} style={style}>
       <Person person={data[index]} />
@@ -28,14 +21,14 @@ export default function PersonsList() {
   const persons = usePersons();
 
   if (!persons) return <Spinner />;
+  if (!persons.length) return <p className="mt-1">No person matches your search</p>;
 
   return (
     <div className="containesr" style={{ height: "100vh" }}>
       <div className="rosw" style={{ height: "100vh" }}>
         <ul style={{ height: "100%" }}>
-          <AutoSizer>
+          {/* <AutoSizer>
             {({ height, width }: any) => {
-              console.log({ height: width });
 
               return (
                 <List
@@ -50,10 +43,8 @@ export default function PersonsList() {
                 </List>
               );
             }}
-          </AutoSizer>
-          {/* {persons.slice(0, 40).map((person: any) => (
-            <Person key={person.id} person={person} />
-          ))} */}
+          </AutoSizer> */}
+          {persons.map(person => <Person person={person} key={person.id}/>)}
         </ul>
       </div>
     </div>

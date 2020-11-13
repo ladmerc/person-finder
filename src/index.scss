@@ -1,2 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "./styles.scss";
+
+@media only screen and (min-width: 768px) {
+  .container-width {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

@@ -1,8 +1,9 @@
 import * as React from "react";
 import Avatar from "./avatar";
+import { TPerson } from '../../models'
 
-export default function Person({ person }: any) {
-  const { name, avatar, description } = person;
+export default function Person({ person }: { person: TPerson }) {  
+  const { name, description } = person;
 
   return (
     <li className="mt-3">
