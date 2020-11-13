@@ -1,0 +1,47 @@
+{
+  "name": "personfinder",
+  "homepage": "http://ladmerc.github.io/person-finder",
+  "version": "1.0.0",
+  "description": "React and TypeScript example starter project",
+  "keywords": [
+    "typescript",
+    "react",
+    "starter"
+  ],
+  "main": "src/index.tsx",
+  "dependencies": {
+    "bootstrap": "4.5.3",
+    "lodash.debounce": "4.0.8",
+    "node-sass": "^4.0.0",
+    "react": "17.0.0",
+    "react-dom": "17.0.0",
+    "react-helmet": "6.1.0",
+    "react-scripts": "3.4.1",
+    "react-virtualized-auto-sizer": "1.0.2",
+    "react-window": "1.8.6"
+  },
+  "devDependencies": {
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/react": "16.9.19",
+    "@types/react-dom": "16.9.5",
+    "@types/react-helmet": "^6.1.0",
+    "@types/react-virtualized-auto-sizer": "^1.0.0",
+    "@types/react-window": "^1.8.2",
+    "gh-pages": "^3.1.0",
+    "typescript": "3.7.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
